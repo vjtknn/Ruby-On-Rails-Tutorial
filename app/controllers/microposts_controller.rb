@@ -13,6 +13,12 @@ class MicropostsController < ApplicationController
     end
   end
 
+  def show
+    @micropost = Micropost.find(params[:id])
+    @comments = @micropost.comments.paginate(page: params[:page])
+    @comment = @micropost.comments.build if logged_in?
+  end
+
   def destroy
     @micropost.destroy
     flash[:success] = "Post deleted"

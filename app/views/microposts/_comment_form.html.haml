@@ -1,0 +1,6 @@
+= form_for(@comment) do |f|
+  =hidden_field_tag :micropost_id, params[:id]
+  =render 'shared/error_messages', object: f.object
+  %div.field
+    =f.text_area :content, placeholder: "Add new comment..."
+  =f.submit "Add", class: "btn btn-primary"
