@@ -9,6 +9,12 @@
         =render 'shared/stats'
       %section.micropost_form
         =render 'shared/micropost_form'
+      %section.tags_cloud
+        Tags:
+        %br
+        -tag_cloud Micropost.tag_counts, %w[s m l] do |tag, css_class|
+          =link_to tag.name, tag_path(tag.name), class: css_class
+
 
     %div.col-md-8
       %h3 Micropost Feed

@@ -17,6 +17,8 @@ gem 'jquery-rails',            '4.3.1'
 gem 'turbolinks',              '5.0.1'
 gem 'jbuilder',                '2.6.1'
 gem 'haml', '~> 4.0', '>= 4.0.7'
+gem 'acts-as-taggable-on', '~> 4.0'
+
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

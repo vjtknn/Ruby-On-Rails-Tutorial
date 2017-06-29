@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   resources :microposts,          only: [:create, :destroy, :show]
   resources :relationships, only: [:create, :destroy]
   resources :comments, only: [:create, :destroy]
+  get 'tags/:tag', to: 'static_pages#home', as: :tag
 end

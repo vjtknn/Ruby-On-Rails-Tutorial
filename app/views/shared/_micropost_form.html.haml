@@ -1,6 +1,8 @@
 = form_for(@micropost) do |f|
   =render 'shared/error_messages', object: f.object
   %div.field
+    =f.label :tag_list, "Tags (separated by commas)"
+    =f.text_field :tag_list
     =f.text_area :content, placeholder: "Compose new micropost ..."
   =f.submit "Post", class: "btn btn-primary "
   %span.picture
